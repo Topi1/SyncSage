@@ -1,8 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap');
+
+
 body {
   font-size: 1rem;
-  padding: 10px;
-  background-color: brown;
+  background-color: #322C2B;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-family: "Cherry Swash", serif;
 }
+
+.mainCont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
 
 /* Styles for tablets */
 @media (min-width: 768px) {
