@@ -5,6 +5,8 @@ import './App.css'
 import Navbar from '../components/Navbar'
 import MobileFooter from '../components/MobileFooter'
 
+import Dashboard from '../components/Dashboard'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -13,6 +15,8 @@ function App() {
       <Navbar></Navbar>
 
       <div className="mainCont">
+        
+        <Dashboard></Dashboard>
         
       </div>
 

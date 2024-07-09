@@ -13,7 +13,8 @@
     align-items: center;
     justify-content: center;
 
-    border-top: #AF8260 2px solid;   
+    border-top: #803D3B 2px solid;
+      
     border-radius: 10px 10px 0px 0px;   
 
     color: #E4C59E;
@@ -29,7 +30,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .footerMenu li {
@@ -42,10 +43,7 @@
 }
 
 .footerMenu li:first-child {
-    border-right: none;
-    background-color: #803D3B;
     border-radius: 10px 0px 0px 0px;
-    text-decoration: underline;
   }
 
 .footerMenu li:last-child {
