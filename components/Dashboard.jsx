@@ -24,6 +24,9 @@ const Dashboard = () => {
     const [layout, setLayout] = useState(initialLayout);
     const [widgets, setWidgets] = useState(initialWidgets);
 
+    const [widgetCounter, setWidgetCounter] = useState(1)
+    const [noteWidgetCounter, setNoteWidgetCounter] = useState(1)
+
     useEffect(() => {
         const handleResize = () => {
             setWidth(window.innerWidth);
@@ -40,23 +43,25 @@ const Dashboard = () => {
     };
 
     const addWidget = () => {
-        const newId = `widget_${layout.length + 1}`;
+        const newId = `widget_${widgetCounter}`;
         const newLayout = [...layout, { i: newId, x: 0, y: Infinity, w: 2, h: 2 }];
-        const newWidget = { id: newId, title: `Widget ${widgets.length + 1}`, content: `Content ${widgets.length + 1}` };
+        const newWidget = { id: newId, title: `Widget ${widgetCounter}`, content: `Content ${widgetCounter}` };
         setLayout(newLayout);
         setWidgets([...widgets, newWidget]);
         localStorage.setItem('layout', JSON.stringify(newLayout));
         localStorage.setItem('widgets', JSON.stringify([...widgets, newWidget]));
+        setWidgetCounter(widgetCounter + 1)
     };
 
     const addNoteWidget = () => {
-        const newId = `note_${layout.length + 1}`;
+        const newId = `note_${noteWidgetCounter}`;
         const newLayout = [...layout, { i: newId, x: 0, y: Infinity, w: 2, h: 2 }];
-        const newNoteWidget = { id: newId, title: `Note ${widgets.length + 1}`, content: `Content ${widgets.length + 1}` };
+        const newNoteWidget = { id: newId, title: `Note ${noteWidgetCounter}`, content: `` };
         setLayout(newLayout);
         setWidgets([...widgets, newNoteWidget]);
         localStorage.setItem('layout', JSON.stringify(newLayout));
         localStorage.setItem('widgets', JSON.stringify([...widgets, newNoteWidget]));
+        setNoteWidgetCounter(noteWidgetCounter + 1)
     }
 
     const saveNote = (id, content) => {
@@ -79,15 +84,19 @@ const Dashboard = () => {
     const responsiveProps = {
         className: 'layout',
         breakpoints: { lg: 1200, md: 960, sm: 720, xs: 480, xxs: 0 },
-        cols: { lg: 3, md: 3, sm: 2, xs: 1, xxs: 1 },
+        cols: { lg: 6, md: 3, sm: 2, xs: 1, xxs: 1 },
         
         
     };
 
     return (
+        <>
+        <section className='dashButtons'>
+                <button onClick={addWidget}>Add Widget</button>
+                <button onClick={addNoteWidget}>Add Note</button>
+            </section>
         <div className='dashMain'>
-            <button onClick={addWidget}>Add Widget</button>
-            <button onClick={addNoteWidget}>Add Note</button>
+            
             <ResponsiveGridLayout
                 {...responsiveProps}
                 layouts={{ lg: layout, md: layout, sm: layout, xs: layout, xxs: layout }}
@@ -117,6 +126,7 @@ const Dashboard = () => {
                 ))}
             </ResponsiveGridLayout>
         </div>
+        </>
     );
 };
 

@@ -17,7 +17,7 @@ const NoteWidget = ({ id, title, content, removeWidget, saveNote }) => {
         <div className="widget">
             <div className="widget-header">
                 <h3>{title}</h3>
-                <button className="remove-widget" onClick={() => removeWidget(id)}>Remove</button>
+                
             </div>
             <div className="widget-content">
                 <textarea 
@@ -25,6 +25,7 @@ const NoteWidget = ({ id, title, content, removeWidget, saveNote }) => {
                     onChange={handleNoteChange}
                     placeholder="Write your note here..."
                 />
+                <button className="remove-widget" onClick={() => removeWidget(id)}>Remove</button>
             </div>
         </div>
     );

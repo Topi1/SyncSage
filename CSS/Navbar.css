@@ -51,6 +51,18 @@
     padding-right: 5px;
 }
 
+
+.datetime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #803D3B;
+    height: 100%;
+    width: 280px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 /* Styles for desktops */
 @media (min-width: 1024px) {
     .textLogo {
