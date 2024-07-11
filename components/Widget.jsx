@@ -1,11 +1,18 @@
 import React from 'react';
 
-const Widget = ({ title, content }) => {
+const Widget = ({ id, title, content, removeWidget }) => {
+    
   return (
-    <div className="widget-content">
-      <h3>{title}</h3>
-      <p>{content}</p>
-    </div>
+    <div className="widget">
+            <div className="widget-header">
+                <h3>{title}</h3>
+                
+            </div>
+            <div className="widget-content">
+                {content}
+                <button className="remove-widget" onClick={() => removeWidget(id)}>Remove</button>
+            </div>
+        </div>
   );
 };
 

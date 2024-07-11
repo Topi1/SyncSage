@@ -9,6 +9,8 @@ body {
   margin: 0;
   display: flex;
   font-family: "Cherry Swash", serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .mainCont {
@@ -18,38 +20,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-
-.widget-content {
-  background: #E4C59E;
-  color: #322C2B;
-  box-shadow: 0px 3px 10px black;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.widget button {
-  margin-top: 10px;
-}
-
-button {
-  margin: 10px;
-  padding: 5px 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
 }
 
 
