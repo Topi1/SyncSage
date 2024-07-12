@@ -84,7 +84,7 @@ const Dashboard = () => {
     const responsiveProps = {
         className: 'layout',
         breakpoints: { lg: 1200, md: 960, sm: 720, xs: 480, xxs: 0 },
-        cols: { lg: 6, md: 3, sm: 2, xs: 1, xxs: 1 },
+        cols: { lg: 6, md: 4, sm: 3, xs: 2, xxs: 2 },
         
         
     };
@@ -92,9 +92,15 @@ const Dashboard = () => {
     return (
         <>
         <section className='dashButtons'>
+            <section className='dashLeft'>
+                <h2>Customizable Dashboard</h2>
+            </section>
+            <section className="dashRight">
                 <button onClick={addWidget}>Add Widget</button>
                 <button onClick={addNoteWidget}>Add Note</button>
-            </section>
+                <button onClick={addNoteWidget}>Add Note</button>
+            </section>    
+        </section>
         <div className='dashMain'>
             
             <ResponsiveGridLayout

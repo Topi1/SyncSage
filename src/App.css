@@ -11,6 +11,8 @@ body {
   font-family: "Cherry Swash", serif;
   overflow-x: hidden;
   overflow-y: hidden;
+
+  user-select: none;
 }
 
 .mainCont {

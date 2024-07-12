@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
 
-    border-top: #803D3B 2px solid;
+    border-top: #803D3B 3px solid;
       
     border-radius: 10px 10px 0px 0px;   
 
@@ -39,14 +39,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 2px solid #803D3B;
+    border-right: 3px solid #803D3B;
+    transition: 0.4s;
+}
+
+.footerMenu li:hover {
+    background-color: #803D3B;
+    cursor: pointer;
 }
 
 .footerMenu li:first-child {
     border-radius: 10px 0px 0px 0px;
+    
   }
 
 .footerMenu li:last-child {
     border-right: none;
     border-radius: 0px 10px 0px 0px;  
   }
+
+/* Styles for desktops */
+@media (min-width: 1024px) {
+    .footerMenu {
+        font-size: 1.2rem;
+    }
+  }  

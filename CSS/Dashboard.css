@@ -4,18 +4,51 @@
     display: flex;
     flex-direction: column;
     
-    border: 2px solid #803D3B;
+    border: 3px solid #803D3B;
+    border-top: none;
+
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-color: #E4C59E #803D3B;
     scrollbar-width: thin;
 
     box-shadow: 0px 3px 10px black;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 0px 0px 0px 10px;
 }
 
 
+.dashButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    width: 90%;
+    height: 50px;
 
+    color: #E4C59E;
+    
+    
+    border-radius: 10px 10px 0px 0px;
+    border: #803D3B 3px solid;
+
+    box-shadow: 0px 3px 10px black;
+    z-index: 5;
+}
+
+.dashLeft {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashRight {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
   
   .widget {
@@ -73,18 +106,22 @@
  
 
   button {
-    width: 100px;
+    transition: 0.4s;
+    width: 96px;
     margin: 10px;
     padding: 5px 10px;
-    background-color: #AF8260;
-    color: #322C2B;
+    background-color: #803D3B;
+    color: #E4C59E;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     z-index: 2;
+
+    font-family: "Cherry Swash", serif;
   }
   
   button:hover {
-    background-color: #E4C59E;
+    background-color: #322C2B;
+    
   }
     

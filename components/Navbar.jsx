@@ -9,9 +9,19 @@ export default function Navbar() {
   return (
     <nav className="navMain">
         <section className="nav1">
-            <img src={logo} alt="" className="textLogo" />
-            <DateTime></DateTime>
-            <img src={profileIcon} alt="" className="profileIcon" />
+            <section className="navLeft">
+                <img src={logo} alt="" className="textLogo" />
+                <h1>"The wise way forward."</h1>
+            </section>
+            <section className="navRight">
+                <DateTime></DateTime>
+                <ul className='languageList'>
+                    <li>Eng</li>
+                    <li>Fin</li>
+                    <li>Ger</li>
+                </ul>
+                <img src={profileIcon} alt="" className="profileIcon" />
+            </section>
         </section>
         <section className="nav2">
 
