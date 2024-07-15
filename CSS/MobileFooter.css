@@ -46,6 +46,8 @@
 .footerMenu li:hover {
     background-color: #803D3B;
     cursor: pointer;
+    text-decoration: underline;
+    
 }
 
 .footerMenu li:first-child {

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next'
 
 
 const NoteWidget = ({ id, title, content, removeWidget, saveNote }) => {
     const [noteContent, setNoteContent] = useState(content);
+
+    const { t, i18n } = useTranslation()
 
     useEffect(() => {
         setNoteContent(content);
@@ -23,7 +26,7 @@ const NoteWidget = ({ id, title, content, removeWidget, saveNote }) => {
                 <textarea 
                     value={noteContent} 
                     onChange={handleNoteChange}
-                    placeholder="Write your note here..."
+                    placeholder={t("placeholder")}
                 />
                 <button className="remove-widget" onClick={() => removeWidget(id)}>Remove</button>
             </div>

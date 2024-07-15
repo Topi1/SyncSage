@@ -6,9 +6,18 @@ import "../CSS/Dashboard.css"
 import Widget from './Widget';
 import NoteWidget from './NoteWidget';
 
+import { useTranslation } from 'react-i18next';
+
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Dashboard = () => {
+
+    const { t, i18n } = useTranslation()
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng)
+    }
+
     const initialLayout = JSON.parse(localStorage.getItem('layout')) || [
         { i: 'a', x: 0, y: 0, w: 2, h: 2 },
         { i: 'b', x: 2, y: 0, w: 2, h: 2 },
@@ -93,12 +102,13 @@ const Dashboard = () => {
         <>
         <section className='dashButtons'>
             <section className='dashLeft'>
-                <h2>Customizable Dashboard</h2>
+                <h2>{t("dash")}</h2>
             </section>
             <section className="dashRight">
                 <button onClick={addWidget}>Add Widget</button>
                 <button onClick={addNoteWidget}>Add Note</button>
-                <button onClick={addNoteWidget}>Add Note</button>
+                <button onClick={addNoteWidget}>Add Chart</button>
+                <button onClick={addNoteWidget}>Add Alarm</button>
             </section>    
         </section>
         <div className='dashMain'>

@@ -41,6 +41,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #803D3B;
+    
+
+    
 }
 .dashRight {
     height: 100%;
@@ -78,6 +82,10 @@
     border-bottom: 2px solid #322C2B;
   }
 
+  .widget-header:hover {
+    cursor: move;
+  }
+
   .widget-content {
     height: 80%;
     width: 100%;
@@ -101,18 +109,19 @@
   
   .widget button {
     margin-top: 10px;
+    border: none;
     
   }
  
 
   button {
     transition: 0.4s;
-    width: 96px;
+    border: none;
     margin: 10px;
     padding: 5px 10px;
     background-color: #803D3B;
     color: #E4C59E;
-    border: none;
+    
     border-radius: 4px;
     cursor: pointer;
     z-index: 2;
