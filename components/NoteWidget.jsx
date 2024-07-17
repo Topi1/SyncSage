@@ -16,10 +16,12 @@ const NoteWidget = ({ id, title, content, removeWidget, saveNote }) => {
         saveNote(id, e.target.value);
     };
 
+    
+
     return (
         <div className="widget">
             <div className="widget-header">
-                <h3>{title}</h3>
+                <h3>{t('notename')}</h3>
                 
             </div>
             <div className="widget-content">
@@ -28,7 +30,7 @@ const NoteWidget = ({ id, title, content, removeWidget, saveNote }) => {
                     onChange={handleNoteChange}
                     placeholder={t("placeholder")}
                 />
-                <button className="remove-widget" onClick={() => removeWidget(id)}>Remove</button>
+                <button className="remove-widget" onClick={() => removeWidget(id)}>{t("buttonRemove")}</button>
             </div>
         </div>
     );

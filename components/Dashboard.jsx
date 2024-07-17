@@ -65,7 +65,7 @@ const Dashboard = () => {
     const addNoteWidget = () => {
         const newId = `note_${noteWidgetCounter}`;
         const newLayout = [...layout, { i: newId, x: 0, y: Infinity, w: 2, h: 2 }];
-        const newNoteWidget = { id: newId, title: `Note ${noteWidgetCounter}`, content: `` };
+        const newNoteWidget = { id: newId, content: `` };
         setLayout(newLayout);
         setWidgets([...widgets, newNoteWidget]);
         localStorage.setItem('layout', JSON.stringify(newLayout));

@@ -7,6 +7,8 @@
 
     "placeholder": "Write here...",
 
+    "buttonRemove": "Remove",
+
     "footerHome": "Home",
 
     "footerCalendar": "Calendar",
@@ -15,5 +17,13 @@
 
     "footerSports": "Sports",
 
-    "footerFood": "Food"
+    "footerFood": "Food",
+
+    "tasks": "Tasks",
+
+    "calendar": "Calendar",
+
+    "sports": "Sports",
+
+    "food": "Food"
 }

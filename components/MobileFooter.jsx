@@ -1,5 +1,7 @@
 import React from 'react'
 import "../CSS/MobileFooter.css"
+import { Link } from 'react-router-dom';
+
 
 import { useTranslation } from 'react-i18next'
 
@@ -10,11 +12,11 @@ export default function MobileFooter() {
   return (
     <footer className="mainMobFooter">
         <ul className="footerMenu">
-            <li>{t("footerHome")}</li>
-            <li>{t("footerCalendar")}</li>
-            <li>{t("footerTasks")}</li>
-            <li>{t("footerSports")}</li>
-            <li>{t("footerFood")}</li>
+            <li><Link to="/dashboard">{t("footerHome")}</Link></li>
+            <li><Link to="/calendar">{t("footerCalendar")}</Link></li>
+            <li><Link to="/taskboard">{t("footerTasks")}</Link></li>
+            <li><Link to="/sports">{t("footerSports")}</Link></li>
+            <li><Link to="/food">{t("footerFood")}</Link></li>
         </ul>
     </footer>
   )

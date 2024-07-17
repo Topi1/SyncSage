@@ -8,6 +8,8 @@
 
     "placeholder": "Kirjoita tähän...",
 
+    "buttonRemove": "Poista",
+
     "footerHome": "Koti",
 
     "footerCalendar": "Kalenteri",
@@ -16,5 +18,13 @@
 
     "footerSports": "Urheilu",
 
-    "footerFood": "Ruoka"
+    "footerFood": "Ruoka",
+
+    "tasks": "Tehtävät",
+
+    "calendar": "Kalenteri",
+
+    "sports": "Liikunta",
+
+    "food": "Ravinto"
 }
