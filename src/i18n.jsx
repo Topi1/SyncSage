@@ -3,6 +3,8 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 
+const base = import.meta.env.BASE_URL || '/';
+
 i18n
   .use(Backend)
   .use(LanguageDetector)
@@ -14,7 +16,7 @@ i18n
       escapeValue: false, // React already escapes values to prevent XSS
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: `${base}locales/{{lng}}/{{ns}}.json`,
     },
   });
 
