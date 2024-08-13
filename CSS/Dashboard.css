@@ -32,7 +32,7 @@
     border: #803D3B 3px solid;
 
     box-shadow: 0px 3px 10px black;
-    z-index: 5;
+    z-index: 10;
 }
 
 .dashLeft {
@@ -135,5 +135,22 @@
   button:hover {
     background-color: #322C2B;
     
+  }
+
+  @media (max-width: 768px) {
+    
+    .dashLeft {
+      font-size: 0.8rem;
+    }
+    .dashRight {
+      justify-content: center;
+      align-items: center;
+    }
+    .dashRight button{
+      width: 58px;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.65rem;
+    }
   }
     

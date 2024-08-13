@@ -27,10 +27,7 @@ const Food = () => {
                 <h2>{t("food")}</h2>
             </section>
             <section className="dashRight">
-                <button >Add Widget</button>
-                <button >Add Note</button>
-                <button >Add Chart</button>
-                <button >Add Alarm</button>
+                
             </section>    
         </section>
         <div className='dashMain'>

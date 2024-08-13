@@ -10,7 +10,7 @@
     transition: 0.3s;
     color: #E4C59E;
     top: 0px;
-    z-index: 5;
+    z-index: 9;
     align-self: center;
     justify-self: center;
     background-color: #322C2B;
@@ -115,6 +115,15 @@
     cursor: pointer;
     text-decoration: underline ;
 }
+
+@media (max-width: 768px) {
+    .datetime {
+        display: none;
+    }
+    .motto {
+        display: none;
+    }
+  }
 
 /* Styles for desktops */
 @media (min-width: 1024px) {

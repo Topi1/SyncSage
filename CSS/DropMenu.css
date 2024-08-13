@@ -1,0 +1,49 @@
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+
+    z-index: 100;
+    
+  }
+  
+  .login-dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #8f4945;
+    
+    padding: 15px;
+    box-shadow: 0px 3px 10px black;
+    z-index: 100;
+  }
+  
+ 
+  .login-dropdown form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-dropdown input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-dropdown button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-dropdown button:hover {
+    background-color: #45a049;
+  }
+  
+
+  .login-dropdown p {
+    color: red;
+  }

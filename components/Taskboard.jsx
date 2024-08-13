@@ -12,7 +12,7 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Taskboard = () => {
   const { t } = useTranslation();
-  const { tasks, addTask } = useTasks();
+  const { tasks, addTask, removeTask } = useTasks();
 
   const initialLayout = JSON.parse(localStorage.getItem('layout')) || [];
 
@@ -45,6 +45,8 @@ const Taskboard = () => {
     localStorage.setItem('layout', JSON.stringify(newLayout));
   };
 
+  
+
   const responsiveProps = {
     className: 'layout',
     breakpoints: { lg: 1200, md: 960, sm: 720, xs: 480, xxs: 0 },
@@ -60,22 +62,26 @@ const Taskboard = () => {
           <h2>{t("tasks")}</h2>
         </section>
         <section className="dashRight">
-          <TaskInput addTask={addTask} />
+          
         </section>
       </section>
       <div className='dashMain'>
+        <div className="addTaskSec">
+            <TaskInput addTask={addTask} />
+        </div>
         <ResponsiveGridLayout
           {...responsiveProps}
           layout={layout}
           onLayoutChange={onLayoutChange}
-          draggableHandle=".widget"
+          draggableHandle=".widget-header"
         >
           {tasks.map((task, index) => (
             <div key={`task_${index}`} data-grid={layout.find(l => l.i === `task_${index}`)}>
               <Widget 
                 id={`task_${index}`} 
                 title={task.task} 
-                content={`${task.time} hours`} 
+                content={`${task.time} hours`}
+                removeWidget={() => removeTask(index)} 
               />
             </div>
           ))}

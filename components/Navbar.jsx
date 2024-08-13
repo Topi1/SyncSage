@@ -1,5 +1,8 @@
-import React, { useTransition } from 'react'
+import React, { useTransition, useState } from 'react'
 import "../CSS/Navbar.css"
+
+import DropMenu from "./DropMenu"
+
 import logo from "../src/assets/logos/sageText.png"
 import profileIcon from "../src/assets/icons/profile.png"
 
@@ -16,6 +19,15 @@ export default function Navbar() {
     }
 
     
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
+
+    const closeDropdown = () => {
+        setShowDropdown(false);
+    };
 
 
   return (
@@ -23,7 +35,7 @@ export default function Navbar() {
         <section className="nav1">
             <section className="navLeft">
                 <img src={logo} alt="" className="textLogo" />
-                <h1>"{t("navmotto")}"</h1>
+                <h1 className='motto'>"{t("navmotto")}"</h1>
             </section>
             <section className="navRight">
                 <DateTime></DateTime>
@@ -32,12 +44,15 @@ export default function Navbar() {
                     <li onClick={ () => changeLanguage("fin")}>Fin</li>
                     <li>Ger</li>
                 </ul>
-                <img src={profileIcon} alt="" className="profileIcon" />
+                <img src={profileIcon} alt="" className="profileIcon" onClick={toggleDropdown}/>
+                    {showDropdown && (
+                    <div className="dropdown-container">
+                    <DropMenu onClose={closeDropdown} />
+                    </div>
+                )}
             </section>
         </section>
-        <section className="nav2">
-
-        </section>
+        
         
     </nav>
   )

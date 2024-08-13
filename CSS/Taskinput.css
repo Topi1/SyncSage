@@ -11,3 +11,7 @@ input {
 
     font-family: "Cherry Swash", serif;
 }
+
+@media (max-width: 768px) {
+    
+  }
