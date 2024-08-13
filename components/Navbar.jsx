@@ -10,6 +10,8 @@ import DateTime from './DateTime'
 
 import { useTranslation } from 'react-i18next'
 
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
 
     const { t, i18n } = useTranslation()
@@ -34,7 +36,8 @@ export default function Navbar() {
     <nav className="navMain">
         <section className="nav1">
             <section className="navLeft">
-                <img src={logo} alt="" className="textLogo" />
+                <Link to="/home" className='homeLink'><img src={logo} alt="" className="textLogo" /></Link>
+                
                 <h1 className='motto'>"{t("navmotto")}"</h1>
             </section>
             <section className="navRight">

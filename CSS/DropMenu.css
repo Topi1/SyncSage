@@ -32,15 +32,15 @@
   
   .login-dropdown button {
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #322C2B;
+    color: #E4C59E;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
   
   .login-dropdown button:hover {
-    background-color: #45a049;
+    background-color: #312d2c;
   }
   
 

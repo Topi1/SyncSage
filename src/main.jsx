@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
   <TaskProvider>
 
-  <BrowserRouter>
+  <BrowserRouter basename="/SyncSage">
     <App />
   </BrowserRouter>
 

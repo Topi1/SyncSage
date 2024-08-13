@@ -1,6 +1,6 @@
 .navMain {
     width: 100vw;
-    height: 100px;
+    height: 50px;
 
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     transition: 0.3s;
     color: #E4C59E;
     top: 0px;
-    z-index: 9;
+    z-index: 50;
     align-self: center;
     justify-self: center;
     background-color: #322C2B;
@@ -22,7 +22,7 @@
 .nav1 {
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 100%;
     
     border-bottom: #803D3B 3px solid;
     border-radius: 0px 0px 10px 10px;
@@ -56,18 +56,17 @@
 
 
 
-.nav2 {
-    width: 100%;
-    height: 50%;
-    border-bottom: #AF8260 2px solid;
-    border-radius: 0px 0px 10px 10px;
-    display: none;
-    
+.homeLink {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .textLogo {
     
-    width: 70%;
+    width: 100%;
     height: auto;
 
 }
@@ -127,9 +126,9 @@
 
 /* Styles for desktops */
 @media (min-width: 1024px) {
-    .textLogo {
+    .homeLink {
         width: 25%;
-        height: auto;
+        height: 100%;
     }
 
     .datetime {

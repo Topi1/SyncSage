@@ -3,6 +3,7 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import "../CSS/Dashboard.css"
+import "../CSS/Home.css"
 import Widget from './Widget';
 import NoteWidget from './NoteWidget';
 
@@ -10,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 
 
-const Sports = () => {
+const Home = () => {
 
     const { t, i18n } = useTranslation()
 
@@ -22,20 +23,21 @@ const Sports = () => {
 
     return (
         <>
-        <section className='dashButtons'>
-            <section className='dashLeft'>
-                <h2>{t("sports")}</h2>
+        
+        <div className='homeMain'>
+            <section className="homeSec">
+                <h1>This is your Dojo.</h1>
+                <h1>Time to become a Sage</h1>
             </section>
-            <section className="dashRight">
-                
-            </section>    
-        </section>
-        <div className='dashMain'>
-        <h1>I am going to add something here</h1>
+
+            <section className="homeSec">
+            
+            </section>
             
         </div>
+
         </>
     );
 };
 
-export default Sports;
+export default Home;

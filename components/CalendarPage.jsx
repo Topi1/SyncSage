@@ -8,15 +8,24 @@ import NoteWidget from './NoteWidget';
 
 import { useTranslation } from 'react-i18next';
 
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 
-const Calendar = () => {
+
+const CalendarPage = () => {
 
     const { t, i18n } = useTranslation()
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng)
     }
+
+    const [date, setDate] = useState(new Date());
+
+    const handleDateChange = (newDate) => {
+        setDate(newDate);
+    };
 
     
 
@@ -31,11 +40,16 @@ const Calendar = () => {
             </section>    
         </section>
         <div className='dashMain'>
-            
+                <div className="calendar-container">
+                    <Calendar
+                        onChange={handleDateChange}
+                        value={date}
+                    />
+                </div>
             
         </div>
         </>
     );
 };
 
-export default Calendar;
+export default CalendarPage;
