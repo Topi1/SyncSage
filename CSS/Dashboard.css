@@ -138,6 +138,9 @@
   }
 
   @media (max-width: 768px) {
+    .dashMain {
+      height: 73%;
+    }
     
     .dashLeft {
       font-size: 0.8rem;
