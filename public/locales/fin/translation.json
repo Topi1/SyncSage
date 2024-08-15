@@ -26,5 +26,15 @@
 
     "sports": "Liikunta",
 
-    "food": "Ravinto"
+    "food": "Ravinto",
+
+    "widgetBtn": "Lisää Widget",
+
+    "noteBtn": "Lisää Muistio",
+
+    "chartBtn": "Lisää Chart",
+
+    "homeText1": "Tämä on sinun Dojosi.",
+
+    "homeText2": "On aika olla Sage!"
 }

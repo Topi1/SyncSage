@@ -26,8 +26,8 @@ const Home = () => {
         
         <div className='homeMain'>
             <section className="homeSec">
-                <h1>This is your Dojo.</h1>
-                <h1>Time to become a Sage</h1>
+                <h1>{t("homeText1")}</h1>
+                <h1>{t("homeText2")}</h1>
             </section>
 
             <section className="homeSec">

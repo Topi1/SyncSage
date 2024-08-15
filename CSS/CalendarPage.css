@@ -1,0 +1,19 @@
+.calendar-container {
+    
+    background-color: #322C2B;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .react-calendar {
+    width: 100%;
+    height: 100%;
+    background: #322C2B;
+    border: none;
+    font-family: Arial, sans-serif;
+  }

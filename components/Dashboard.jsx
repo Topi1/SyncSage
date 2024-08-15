@@ -128,9 +128,9 @@ const Dashboard = () => {
           <h2>{t("dash")}</h2>
         </section>
         <section className="dashRight">
-          <button onClick={addWidget}>Add Widget</button>
-          <button onClick={addNoteWidget}>Add Note</button>
-          <button onClick={addChartWidget}>Add Chart</button>
+          <button onClick={addWidget}>{t("widgetBtn")}</button>
+          <button onClick={addNoteWidget}>{t("noteBtn")}</button>
+          <button onClick={addChartWidget}>{t("chartBtn")}</button>
         </section>
       </section>
       <div className='dashMain'>
