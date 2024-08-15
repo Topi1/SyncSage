@@ -25,5 +25,17 @@
 
     "sports": "Sports",
 
-    "food": "Food"
+    "food": "Food",
+
+    "widgetBtn": "Add Widget",
+
+    "noteBtn": "Add Note",
+
+    "chartBtn": "Add Chart",
+
+    "homeText1": "This is your Dojo.",
+
+    "homeText2": "Time to become a Sage!"
+
+
 }
