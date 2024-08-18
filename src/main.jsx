@@ -5,14 +5,21 @@ import { BrowserRouter } from 'react-router-dom'
 import "./i18n"
 import { TaskProvider } from '../components/TaskContext.jsx'
 
+import { Provider } from 'react-redux';
+import store from './store'; 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  <TaskProvider>
+  <Provider store={store}>
 
-  <BrowserRouter basename="/SyncSage">
-    <App />
-  </BrowserRouter>
+    <TaskProvider>
 
-  </TaskProvider>
+    <BrowserRouter basename="/SyncSage">
+      <App />
+    </BrowserRouter>
+
+    </TaskProvider>
+
+  </Provider>
   
 )

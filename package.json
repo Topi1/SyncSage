@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
     "bcrypt": "^5.1.1",
     "chart.js": "^4.4.3",
     "cors": "^2.8.5",
